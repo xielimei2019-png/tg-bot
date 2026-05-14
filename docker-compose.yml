@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  telegram-bot:
+    build: .
+    container_name: tg-assistant-bot
+    restart: always
+    environment:
+      - BOT_TOKEN=${BOT_TOKEN}
+    volumes:
+      - ./logs:/app/logs
+      - ./bot.log:/app/bot.log
+    networks:
+      - bot-network
+
+networks:
+  bot-network:
+    driver: bridge

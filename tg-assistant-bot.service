@@ -1,0 +1,26 @@
+# systemd 服务配置文件
+# 保存到: /etc/systemd/system/tg-assistant-bot.service
+
+[Unit]
+Description=Telegram Assistant Bot
+After=network.target
+
+[Service]
+Type=simple
+User=YOUR_USERNAME
+WorkingDirectory=/path/to/telegram-bot-assistant
+ExecStart=/usr/bin/python3 /path/to/telegram-bot-assistant/main.py
+Restart=always
+RestartSec=10
+StandardOutput=append:/path/to/telegram-bot-assistant/bot.log
+StandardError=append:/path/to/telegram-bot-assistant/bot.log
+
+# 安全设置（可选）
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+ReadOnlyPaths=/
+ReadWritePaths=/path/to/telegram-bot-assistant
+
+[Install]
+WantedBy=multi-user.target
