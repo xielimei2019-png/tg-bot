@@ -3,12 +3,41 @@
 # 你的 Telegram Bot Token (从 @BotFather 获取)
 BOT_TOKEN = "8539940556:AAHxCyOyB6l-7a_lQegPA5n2aa1OQL5yBbs"
 
-# Cloudflare Workers 代理 URL（让你的云端能访问 Telegram）
-PROXY_URL = "https://tgproxy.2678765520.workers.dev/"
-
 # 主人/管理员的用户ID (可以从 @userinfobot 获取)
 # 设置为你自己的 Telegram 用户ID，这样只有你能使用管理命令
 ADMIN_IDS = []  # 例如: [123456789, 987654321]
+
+# 资讯收集功能配置
+# 接收资讯的用户ID（机器人会把收集到的资讯发给你）
+INFO_RECEIVER_ID = 7684503671  # 你的 Telegram 用户ID
+
+# 资讯关键词列表（当群里有这些关键词时，机器人会转发给你）
+INFO_KEYWORDS = [
+    "WS拉群",
+    "WS精准粉",
+    "WS引流",
+    "WS云控",
+    "WS6段协议号",
+    "WS拉群号",
+    "WS解禁组",
+    "WS反禁用群组",
+    "TG拉群",
+    "TG精准粉",
+    "TG引流",
+    "TG云控",
+    "Telegram拉群",
+    "Telegram云控",
+    "精准粉",
+    "云控系统",
+    "WS群发",
+    "TG群发",
+    "Telegram群发",
+    "批量注册",
+    "养号",
+    "矩阵",
+    "多开",
+    "聚星云控",
+]
 
 # 机器人名称
 BOT_NAME = "TG运营助手"
